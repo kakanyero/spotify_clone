@@ -10,6 +10,7 @@ import 'package:spotify_clone/features/library/screens/local_files_screen.dart';
 import 'package:spotify_clone/features/library/screens/your_episodes_screen.dart';
 import 'package:spotify_clone/features/playlist/playlist_screen.dart';
 import 'package:spotify_clone/features/podcast/podcast_details.dart';
+import 'package:spotify_clone/features/library/screens/new_episodes_screen.dart';
 
 
 class LibraryScreen extends StatefulWidget {
@@ -440,7 +441,12 @@ class _LibraryScreenState extends State<LibraryScreen> {
           onTap: () {
             Navigator.of(context).push(
               MaterialPageRoute(builder: (route) {
-                return const YourEpisodesScreen();
+                if (isYourEpisode) {
+                  return const YourEpisodesScreen();
+                }else{
+                  return const NewEpisodesScreen();
+                }
+                
               })
             );
           },
