@@ -41,13 +41,13 @@ class   _NewEpisodesScreenState extends State<NewEpisodesScreen> {
       body:SingleChildScrollView(
         child: Padding(        
           padding: const .symmetric(horizontal: 16.0),
-          child: Column(
+          child: Column(crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               //Leave a small space between the app bar and the first container
               const SizedBox(height: 32.0),
 
               Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                
                 children: [
                   AppTexts.bold(text: 'Continue listening', size: 12.8, color: AppColors.spotifyGrey),
                 ],
@@ -126,7 +126,9 @@ class   _NewEpisodesScreenState extends State<NewEpisodesScreen> {
 
             ,
             SizedBox(height: 32,),
-            Column(children:[
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children:[
               AppTexts.bold(text: "Today", // from the backend
             size: 12.0, 
             color: AppColors.spotifyGrey),

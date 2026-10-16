@@ -3,8 +3,9 @@ class AppAssets {
   static final String appIcon = "assets/icons/app_icon.png";
   static final String verifiedBadge = "assets/icons/verified-badge.png";
   static final String addMusicIcon = "assets/icons/add-music-icon.png";
+  static final String blendIcon = "assets/icons/blend-icon.png";
 
-  ///Social icons
+    ///Social icons
   static final String twitterIcon = "assets/icons/twitter-icon.png";
   static final String instagramIcon = "assets/icons/instagram-icon.png";
 

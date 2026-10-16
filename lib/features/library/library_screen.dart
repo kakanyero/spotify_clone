@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:spotify_clone/core/app_assets.dart';
@@ -5,9 +7,11 @@ import 'package:spotify_clone/core/app_colors.dart';
 import 'package:spotify_clone/core/app_texts.dart';
 import 'package:spotify_clone/features/album/album_songs_screen.dart';
 import 'package:spotify_clone/features/artist/artist_screen.dart';
+import 'package:spotify_clone/features/library/screens/blend_screen.dart';
 import 'package:spotify_clone/features/library/screens/liked_songs_screen.dart';
 import 'package:spotify_clone/features/library/screens/local_files_screen.dart';
 import 'package:spotify_clone/features/library/screens/your_episodes_screen.dart';
+import 'package:spotify_clone/features/playlist/new_playlist_screen.dart';
 import 'package:spotify_clone/features/playlist/playlist_screen.dart';
 import 'package:spotify_clone/features/podcast/podcast_details.dart';
 import 'package:spotify_clone/features/library/screens/new_episodes_screen.dart';
@@ -94,14 +98,68 @@ class _LibraryScreenState extends State<LibraryScreen> {
                             minWidth: double.infinity,
                             minHeight: 400,
                           ),
+                          backgroundColor: const Color(0xEE242424 ).withValues(alpha: 1),
                           context: context,
+                           showDragHandle: true,
                           builder: (context) {
-                            return Container();
+                            return Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+
+                                AppTexts.bold(text: 'Create',size: 16.0,
+                                color:Colors.white),
+
+                                Padding(
+                                  padding: const .symmetric(vertical: 16.0),
+                                  child: Divider(color:AppColors.spotifyGrey,
+                                  ),
+                                ),
+                                ListTile(  
+                                  onTap: () {
+                                    
+                                    Navigator.of(context).push(
+                                      MaterialPageRoute(builder: (route) => const NewPlaylistScreen())
+                                    ).then( (_) {
+                                      if(context.mounted){Navigator.of(context).pop();}
+                                      
+                                    });
+                                  
+                                  },
+                                  leading: Icon(
+                                    CupertinoIcons.music_note_2,
+                                    color: AppColors.spotifyGrey,
+                                  ),
+                                  title: AppTexts.bold(text: 'Playlists',size: 16.0, color: Colors.white),
+                                  subtitle: AppTexts.medium(text: 'Add songs to the playlist', size: 12.0, color: AppColors.spotifyGrey),
+                                ),
+                                ListTile(
+                                  onTap: () {
+                                    Navigator.of(context).push(
+                                      MaterialPageRoute(builder: (route) => const BlendScreen())
+                                    ).then( (_) {
+                                      if(context.mounted){Navigator.of(context).pop();}
+                                      
+                                    });
+                                  },
+                                  leading: ImageIcon(
+                                    AssetImage(AppAssets.blendIcon),
+                                    color: AppColors.spotifyGrey,
+                                  ),
+                                  title: AppTexts.bold(text: 'Blend',size: 16.0, color: Colors.white),
+                                  subtitle: AppTexts.medium(text: 'Combines taste in a shared playlist with friends', size: 12.0, color: AppColors.spotifyGrey),
+                                ),  
+
+                                //Leave space at the bottom
+                                const SizedBox(height: 40,)
+
+
+                              ],
+                            );
                           }
                         );
                   
                       },
-                      icon: Icon(
+                      icon: Icon( 
                         CupertinoIcons.plus,
                         color: Colors.white,
                       )
@@ -190,7 +248,7 @@ class _LibraryScreenState extends State<LibraryScreen> {
                   crossAxisCount: 2,
                   crossAxisSpacing: 24.0,
                   mainAxisSpacing: 32.0,
-                  childAspectRatio: .75
+                  childAspectRatio: .7
                 ),
                 children: List.generate(spotifyLibrary.length, (index) {
 
