@@ -47,7 +47,7 @@ class   _NewEpisodesScreenState extends State<NewEpisodesScreen> {
               const SizedBox(height: 32.0),
 
               Column(
-                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   AppTexts.bold(text: 'Continue listening', size: 12.8, color: AppColors.spotifyGrey),
                 ],
@@ -137,7 +137,13 @@ class   _NewEpisodesScreenState extends State<NewEpisodesScreen> {
                 List.generate(32, (index){
                   return Container(
                     margin: const .only(bottom: 32.0),
-                    decoration: Box
+                    decoration: BoxDecoration(
+                      border: Border(
+                        bottom:BorderSide(
+                        color: AppColors.spotifyGrey.withValues(alpha: .15)
+                      ),
+                      )
+                    ),
                     child:Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
