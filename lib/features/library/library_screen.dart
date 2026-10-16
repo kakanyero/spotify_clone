@@ -89,7 +89,17 @@ class _LibraryScreenState extends State<LibraryScreen> {
 
                   IconButton(
                       onPressed: () {
-                        ///Todo: Add
+                        showModalBottomSheet(
+                          constraints: BoxConstraints(
+                            minWidth: double.infinity,
+                            minHeight: 400,
+                          ),
+                          context: context,
+                          builder: (context) {
+                            return Container();
+                          }
+                        );
+                  
                       },
                       icon: Icon(
                         CupertinoIcons.plus,
