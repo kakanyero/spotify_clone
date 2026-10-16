@@ -190,7 +190,7 @@ class _LibraryScreenState extends State<LibraryScreen> {
                   crossAxisCount: 2,
                   crossAxisSpacing: 24.0,
                   mainAxisSpacing: 32.0,
-                  childAspectRatio: .8
+                  childAspectRatio: .75
                 ),
                 children: List.generate(spotifyLibrary.length, (index) {
 
