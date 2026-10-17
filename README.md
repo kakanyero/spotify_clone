@@ -24,7 +24,7 @@ A Spotify-inspired music streaming mobile application built with **Flutter and D
 
 Additional technologies, such as Firebase, Supabase, or a music playback API, may be integrated as the project develops.
 
-## Design link :[spotify_clone](https://www.figma.com/proto/RccgnCiFhe858jqJf41tDB/Spotify-Mobile-App?node-id=1101-30646&t=CtRyXWt4Lxbabqfo-1)
+## Design link :[spotify_clone](https://www.figma.com/community/file/1210517434816766038/spotify-mobile-app)
 
 ## 🚀 Getting Started
 
