@@ -4,6 +4,7 @@ import 'package:spotify_clone/core/app_colors.dart';
 import 'package:spotify_clone/core/app_texts.dart';
 import 'package:spotify_clone/features/home/home_screen.dart';
 import 'package:spotify_clone/features/library/library_screen.dart';
+import 'package:spotify_clone/features/premium/premium_screen.dart';
 import 'package:spotify_clone/features/search/search_screen.dart';
 
 class HomeMain extends StatefulWidget {
@@ -25,25 +26,17 @@ class _HomeMainState extends State<HomeMain> {
     const HomeScreen(),
     const SearchScreen(),
     const LibraryScreen(),
-    Center(
-        child: Text(
-          "Premium",
-          style: TextStyle(
-              fontSize: 48.0,
-              fontWeight: FontWeight.bold,
-              color: Colors.white
-          ),
-        )
-    ),
+    const PremiumScreen()
+    
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        toolbarHeight: 0,
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: Colors.black,
+      //   toolbarHeight: 0,
+      // ),
 
       body: Stack(
         children: [
