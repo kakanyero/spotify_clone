@@ -58,6 +58,8 @@ class _LibraryScreenState extends State<LibraryScreen> {
     "add podcast",
   ];
 
+  bool _showGrid=true;
+
 
   @override
   Widget build(BuildContext context) {
@@ -96,7 +98,7 @@ class _LibraryScreenState extends State<LibraryScreen> {
                         showModalBottomSheet(
                           constraints: BoxConstraints(
                             minWidth: double.infinity,
-                            minHeight: 400,
+                            minHeight: 300,
                           ),
                           backgroundColor: const Color(0xEE242424 ).withValues(alpha: 1),
                           context: context,
@@ -227,11 +229,9 @@ class _LibraryScreenState extends State<LibraryScreen> {
                 ),
 
                 IconButton(
-                  onPressed: () {
-                    ///Todo:
-                  },
+                  onPressed: () =>setState(() => _showGrid = !_showGrid),
                   icon: Icon(
-                    Icons.list,
+                    _showGrid ? Icons.grid_view_outlined :Icons.list_alt_outlined,
                     color: Colors.white,
                   )
                 )
@@ -239,7 +239,8 @@ class _LibraryScreenState extends State<LibraryScreen> {
             ),
 
             ///Grid items
-            Padding(
+            if (_showGrid)...[
+              Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 32.0),
               child: GridView(
                 shrinkWrap: true,
@@ -345,6 +346,62 @@ class _LibraryScreenState extends State<LibraryScreen> {
                 }),
               ),
             ),
+            ]else...[
+              Column(
+                children: List.generate(11, (index){
+                    return Padding(
+                      padding: .only(bottom: 8.0),
+                      child: ListTile(
+                        contentPadding: EdgeInsets.only(left: 8),
+                        leading: Container(
+                          height: 64,
+                          width: 64,                          
+                          decoration: BoxDecoration(
+                            //color: CupertinoColors.systemYellow
+                            gradient: LinearGradient(
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                              colors: [
+                                const Color(0xEE4202F5).withValues(alpha: .74),
+                                const Color(0xEECA9AF0).withValues(alpha: .5),
+                                const Color(0xEECA9AF0).withValues(alpha: .51),
+                                const Color(0xEEC0EAC9).withValues(alpha: .74),
+                              ]
+                            )
+                          ),
+                        child: Center(
+                          child: ImageIcon(
+                            AssetImage(AppAssets.filledFavoriteIcon),
+                            color: Colors.white,),
+                        ),
+                        ),
+                        title: AppTexts.medium(
+                          text: 'Liked songs',
+                        size: 14.0,
+                        color: Colors.white),
+                        subtitle: Row(
+                          children: [
+                            Transform.rotate(
+                              angle: 120,
+                              child: Icon(
+                                Icons.push_pin_rounded,
+                                size: 14.0,
+                                color: AppColors.spotifyGreen,),
+                            ),
+const SizedBox(width: 4.0,),
+                            AppTexts.medium(
+                          text: 'playlist .${10} songs ',//from the backend
+                        size: 14.0,
+                        color: Colors.grey),
+                          ],
+                        )
+                      ),
+                    );
+                  })
+                ,
+              )
+            ],
+            
 
 
             ///Leave a space at the bottom
