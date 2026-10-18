@@ -4,10 +4,20 @@ class AppAssets {
   static final String verifiedBadge = "assets/icons/verified-badge.png";
   static final String addMusicIcon = "assets/icons/add-music-icon.png";
   static final String blendIcon = "assets/icons/blend-icon.png";
-
+  static final String keyboaedArrowDownIcon = "assets/icons/keyboard-down_arrow.png";
+   static final String phoneIcon = "assets/icons/Mobile.png";
     ///Social icons
   static final String twitterIcon = "assets/icons/twitter-icon.png";
   static final String instagramIcon = "assets/icons/instagram-icon.png";
+
+  //Now playing icons
+  static final String nextIcon = "assets/icons/now_playing_action_icons/Next Btn.png";
+  static final String previousIcon = 'assets/icons/now_playing_action_icons/Previous Btn.png';
+  static final String repeatIcon = "assets/icons/now_playing_action_icons/Replay Btn.png";
+  static final String shuffleIcon = 'assets/icons/now_playing_action_icons/Shuffle Btn.png';
+  static final String shareIcon = 'assets/icons/now_playing_action_icons/Device Btn-1.png';
+  static final String listIcon = 'assets/icons/now_playing_action_icons/Queue Btn.png';
+
 
   ///Bottom nav icons
   static final String home = "assets/icons/navbar_icons/Home Icon.png";
