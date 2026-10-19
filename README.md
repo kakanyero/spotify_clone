@@ -72,17 +72,17 @@ flutter doctor
 flutter run
 ```
 
-## 🗺️ Development Roadmap
+##  Development Roadmap
 
-- [ ] Design the Spotify-inspired home screen.
-- [ ] Implement bottom navigation.
-- [ ] Build the search interface.
-- [ ] Create album and playlist screens.
-- [ ] Implement audio playback.
-- [ ] Add a music player with playback controls.
-- [ ] Implement favorites and library management.
-- [ ] Integrate a backend or music service API, where appropriate.
-- [ ] Test the application on Android and iOS.
+-  Design the Spotify-inspired home screen.
+-  Implement bottom navigation.
+-  Build the search interface.
+-  Create album and playlist screens.
+-  Implement audio playback.
+-  Add a music player with playback controls.
+-  Implement favorites and library management.
+-  Integrate a backend or music service API, where appropriate.
+-  Test the application on Android and iOS.
 ## 📄 License
 
 This project is intended for educational and portfolio purposes.
