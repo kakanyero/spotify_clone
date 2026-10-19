@@ -46,7 +46,24 @@ class _ConnectedDevicesScreenState extends State<ConnectedDevicesScreen>{
           ),
       ),
     ),
-    floatingActionButton:Row(),
+    floatingActionButton:Container(
+      height: 40,
+      margin: .symmetric(horizontal: 16),
+      child: Row(
+        children: [
+          Icon(Icons.volume_down_rounded,color: AppColors.spotifyGrey,),
+          //slider
+          Expanded(
+            child: Slider(value: 0, onChanged: (val){
+              //todo 
+            },thumbColor: Colors.white,
+            inactiveColor: AppColors.spotifyBlack1,
+            activeColor: Colors.white,
+            ),
+          )
+        ],
+      ),
+    ),
     floatingActionButtonLocation: .centerDocked,
     );
   }

@@ -5,15 +5,15 @@ A Spotify-inspired music streaming mobile application built with **Flutter and D
 
 ##  Features
 
-- 🎨 **Modern UI** – Spotify-inspired dark theme and clean interface.
-- 🏠 **Home Screen** – Discover featured music, albums, and playlists.
-- 🔍 **Search** – Search for songs, artists, and albums.
-- 🎵 **Music Player** – Play, pause, and control music playback.
-- 📚 **Library** – Organize favorite songs, albums, and playlists.
-- ❤️ **Favorites** – Save and access your favorite tracks.
-- 📱 **Responsive Design** – Build a consistent experience across supported screen sizes.
+-  **Modern UI** – Spotify-inspired dark theme and clean interface.
+-  **Home Screen** – Discover featured music, albums, and playlists.
+-  **Search** – Search for songs, artists, and albums.
+-  **Music Player** – Play, pause, and control music playback.
+-  **Library** – Organize favorite songs, albums, and playlists.
+-  **Favorites** – Save and access your favorite tracks.
+-  **Responsive Design** – Build a consistent experience across supported screen sizes.
 
-*Features are subject to implementation progress.*
+
 
 ##  Tech Stack
 
@@ -85,4 +85,4 @@ flutter run
 - [ ] Test the application on Android and iOS.
 ## 📄 License
 
-This project is intended for educational and portfolio purposes. Spotify's name, logo, trademarks, and copyrighted
+This project is intended for educational and portfolio purposes.
